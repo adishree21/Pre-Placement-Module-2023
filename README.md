@@ -7,7 +7,7 @@ Pre-Placement-Module-2023
 - Preferred Programming Language: C++
 
 ## Coding Profiles
-- LeetCode: [adirastogi21]//https://leetcode.com/adirastogi21/)
+- LeetCode: [adirastogi21](https://leetcode.com/adirastogi21)
 - HackerRank: [adi_rastogi21](https://www.hackerrank.com/adi_rastogi21)
 
 ## Placement Module

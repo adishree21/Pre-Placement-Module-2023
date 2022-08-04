@@ -1,0 +1,37 @@
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+ 
+// This constant can be avoided by explicitly
+// calculating height of Huffman Tree
+#define MAX_TREE_HT 100
+ 
+
+struct MinHeapNode {
+    char data;
+ 
+    unsigned freq;
+    struct MinHeapNode *left, *right;
+};
+ 
+
+struct MinHeap {
+  
+    unsigned size;
+    unsigned capacity;
+ 
+    struct MinHeapNode** array;
+};
+struct MinHeapNode* newNode(char data, unsigned freq)
+{
+    struct MinHeapNode* temp
+        = (struct MinHeapNode*)malloc
+(sizeof(struct MinHeapNode));
+ 
+    temp->left = temp->right = NULL;
+    temp->data = data;
+    temp->freq = freq;
+ 
+    return temp;
+}
+ 

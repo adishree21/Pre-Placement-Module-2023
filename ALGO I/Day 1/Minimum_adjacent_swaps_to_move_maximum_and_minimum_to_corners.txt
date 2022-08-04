@@ -7,13 +7,13 @@ void solve(int a[], int n)
     int maxx = -1, minn = a[0], l = 0, r = 0;
     for (int i = 0; i < n; i++) {
  
-        // Index of leftmost largest element
+      
         if (a[i] > maxx) {
             maxx = a[i];
             l = i;
         }
  
-        // Index of rightmost smallest element
+        
         if (a[i] <= minn) {
             minn = a[i];
             r = i;

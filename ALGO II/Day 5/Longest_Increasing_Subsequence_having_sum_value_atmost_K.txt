@@ -1,0 +1,45 @@
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int solve(int arr[], int N,
+          int prevele, int i, int K)
+{
+   
+    if (i >= N || K <= 0)
+        return 0;
+ 
+   
+    if (arr[i] <= prevele
+        || (K - arr[i] < 0)) {
+ 
+        return solve(arr, N, prevele,
+                     i + 1, K);
+    }
+ 
+   
+    else {
+        int ans = max(
+            solve(arr, N, arr[i],
+                  i + 1, K - arr[i])
+                + 1,
+            solve(arr, N, prevele,
+                  i + 1, K));
+        return ans;
+    }
+}
+ 
+
+int main()
+{
+    int N = 16;
+    int arr[N]
+        = { 0, 8, 4, 12,
+            2, 10, 6, 14,
+            1, 9, 5, 13,
+            3, 11, 7, 15 };
+    int K = 40;
+ 
+    cout << solve(arr, N,
+                  INT_MIN, 0, K)
+         << endl;
+}

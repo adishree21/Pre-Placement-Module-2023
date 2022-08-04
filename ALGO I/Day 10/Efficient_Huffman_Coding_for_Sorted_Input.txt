@@ -1,0 +1,32 @@
+#include <bits/stdc++.h>
+using namespace std;
+ 
+
+#define MAX_TREE_HT 100
+ 
+
+class QueueNode {
+public:
+    char data;
+    unsigned freq;
+    QueueNode *left, *right;
+};
+ 
+
+class Queue {
+public:
+    int front, rear;
+    int capacity;
+    QueueNode** array;
+};
+ 
+ 
+QueueNode* newNode(char data, unsigned freq)
+{
+    QueueNode* temp = new QueueNode[(sizeof(QueueNode))];
+    temp->left = temp->right = NULL;
+    temp->data = data;
+    temp->freq = freq;
+    return temp;
+}
+ 
